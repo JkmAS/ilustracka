@@ -10,7 +10,7 @@ export const messages = {
     login_mail_bad_format: {type: "info", text: "Musíte zadat iListí mail ve správném formátu"},
     login_fail: {type: "error", text: "Špatné přihlašovací údaje"},
     login_info: {type: "message", text: "Jako přihlašovací údaje použijte standardní použivané. Jedná se o redakční mail a využívané heslo. V případě neznalosti napište mail na redakci či na jkmasg@gmail.com"},
-    upload_success: {type: "success", text: "Všechny soubory úspěšně nahrány. Pod tlačítkem pro nahrání jsou zobrazeny obrázky, u kterých je nutné vyplnit potřebné údaje"},
+    upload_success: {type: "success", text: "Soubor úspěšně nahrán. Pod tlačítkem pro nahrání jsou zobrazeny obrázky, u kterých je nutné vyplnit potřebné údaje"},
     file_name_bad_format: {type: "error", text: "Název obrázku nesmí být prázdný"},
     file_tags_bad_format: {type: "error", text: "Tagy obrázku nesmí být nevyplněny, oddělujeme čárkou"},
     upload_success_completed: {type: "success", text: "Úspěšně uložen název a tagy obrázku"},

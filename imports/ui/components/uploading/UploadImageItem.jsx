@@ -7,9 +7,6 @@ import { analytics } from "meteor/okgrow:analytics";
 //checks
 import {checkNonEmptyArray, checkNonEmptyString} from '../../../lib/client/checkVariables.js';
 
-//translating
-import {translate} from '../../../lib/client/translate.js';
-
 //actions
 import {showMessage} from '../../../actions/message.js';
 import {updateImage} from '../../../actions/images.js';
@@ -88,8 +85,8 @@ export class UploadImageItem extends Component {
                 for (let i = 0; i < result.length; i++) {
                     tagsAI.push(result[i].Name);
                 }
-                //translate the tags, join the array to string
-                translate(tagsAI.join(" "), "en", "cs", this.showTranslatedTags);
+                //call translate the tags, join the array to string
+                Meteor.call('translate', tagsAI.join(" "), "en", "cs", this.showTranslatedTags);
             }
         }
     }
@@ -97,11 +94,12 @@ export class UploadImageItem extends Component {
     /**
      * Function for handle the response of translation api
      *
-     * @param {string|boolean} response False or response.
+     * @param {undefined|Error} error Error.
+     * @param {string} response False or response.
      */
-    showTranslatedTags(response){
-        //if response is successful
-        if(response !== false) {
+    showTranslatedTags(error, response){
+        //if no error and response is not empty
+        if(!error && checkNonEmptyString(response)) {
             //add comma to string
             let readyTags = response.split(' ').join(',');
             //set state and add to input value

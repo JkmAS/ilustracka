@@ -13,6 +13,7 @@ import '../imports/lib/server/aiRekognition.js';
 import '../imports/lib/server/backup.js';
 import '../imports/lib/server/mail.js';
 import '../imports/lib/server/storageS3.js';
+import '../imports/lib/server/translate.js';
 
 Meteor.startup(() => {
     let log = new Logger('server-main');
