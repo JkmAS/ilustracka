@@ -1,0 +1,46 @@
+// =====================================================================
+// Component for administration
+// =====================================================================
+
+div.admin{
+  margin: $margin-medium;
+
+  p{
+    font-weight: bold;
+  }
+
+  table{
+    width: 100%;
+    min-width: 520px;
+    overflow-x: auto;
+    border: 1px solid $color-primary;
+    tr{
+      th{
+        color: $color-white;
+        text-align: center;
+      }
+      td{
+        background-color: $color-white;
+        font-weight: bold;
+        input{
+          width: 100%;
+        }
+        @include button('primary', 100%, $margin-small, none, 0px);
+        &:last-child{
+          @include button('secondary', 100%, $margin-small, none, 0px);
+        }
+      }
+      th, td{
+        padding: $padding-tiny;
+      }
+    }
+  }
+  div {
+    @include button('primary', 100%, $margin-small, none);
+    width: 100%;
+    @media screen and (min-width: 750px) {
+      width: 25%;
+      margin: 0 auto;
+    }
+  }
+}

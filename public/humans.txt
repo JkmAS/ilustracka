@@ -1,0 +1,11 @@
+/* TEAM */
+	Developer: Jakub JkmAS Mejstrik
+	Contact: jkmasg [at] gmail.com
+
+	Illustrator: Lenka Slukova
+	Contact: lenka.slukova [at] ilist.cz
+
+/* SITE */
+	Last update:2017/03/01
+	Language: Czech
+	Doctype: HTML5

@@ -1,0 +1,105 @@
+// =====================================================================
+// Button mixin
+// @param $type (primary|secondary)
+// @param $width
+// @param $margin
+// @param $float
+// =====================================================================
+@mixin button($type, $width: 100%, $margin: 0, $float: none, $border: 1px){
+  button {
+    $color: $color-primary;
+    @if ($type == "primary") {
+      $color: $color-primary;
+    } @else if ($type == "secondary") {
+      $color: $color-secondary;
+    }
+
+    cursor: pointer;
+    background-color: $color;
+    color: $color-white;
+    border: 0;
+    width: $width;
+    height: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
+    font-size: $font-size-small;
+    margin-bottom: $margin;
+    margin-top: $margin;
+    float: $float;
+    transition: border 0.5s, background-color 0.5s, color 0.5s;
+
+    &:hover, &:focus {
+      background-color: $color-white;
+      border: $border solid $color;
+      color: $color;
+    }
+  }
+}
+
+// =====================================================================
+// A type="button" mixin
+// @param $type (primary|secondary)
+// @param $width
+// @param $margin
+// @param $float
+// =====================================================================
+@mixin a-button($type, $width: 100%, $margin: 0, $float: none, $border: 1px){
+  a {
+    $color: $color-primary;
+    @if ($type == "primary") {
+      $color: $color-primary;
+    } @else if ($type == "secondary") {
+      $color: $color-secondary;
+    }
+
+    background-color: $color;
+    color: $color-white;
+    display: block;
+    line-height: 2rem;
+    font-weight: bold;
+    height: 2rem;
+    width: $width;
+    float: $float;
+    margin: $margin;
+    text-align: center;
+    transition: border 0.5s, background-color 0.5s, color 0.5s;
+
+    &:hover, &:focus {
+      background-color: $color-white;
+      border: $border solid $color;
+      color: $color;
+      text-decoration: none;
+    }
+  }
+}
+
+// =====================================================================
+// Img button mixin, not the element itself
+// @param $color
+// @param $url
+// @param $url-hover
+// =====================================================================
+@mixin img-button($type, $url, $url-hover, $width: 100%, $height: 2rem, $margin: 0, $float: none){
+  $color: $color-primary;
+  @if ($type == "primary") {
+    $color: $color-primary;
+  } @else if ($type == "secondary") {
+    $color: $color-secondary;
+  }
+
+  width: $width;
+  margin: $margin;
+  float: $float;
+  background: $color url($url) no-repeat center;
+  background-size: 2rem 2rem;
+  transition: background 0.5s;
+  border: 0;
+  height: $height;
+  cursor: pointer;
+
+  &:hover, &:focus{
+    background: $color-white url($url-hover) no-repeat center;
+    border: 1px solid $color;
+    background-size: 2rem 2rem;
+  }
+}

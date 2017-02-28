@@ -1,0 +1,21 @@
+// =====================================================================
+// 404 component
+// =====================================================================
+
+div.not-found{
+
+  margin: $margin-medium;
+
+  p {
+    font-size: $font-size-middle;
+    font-weight: bold;
+  }
+
+  @media screen and (min-width: 625px) {
+    width: 50%;
+    margin: 0 auto;
+    @media screen and (min-width: 1000px) {
+      width: 30%;
+    }
+  }
+}

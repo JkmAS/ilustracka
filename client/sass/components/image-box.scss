@@ -1,0 +1,110 @@
+// =====================================================================
+// Component with the image and buttons
+// ============================================================
+
+div.search, div.upload{
+  margin: $margin-medium;
+
+  div.search-box, div.upload-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+
+    p{
+      font-weight: bold;
+    }
+
+    div.search-item, div.upload-item{
+      width: calc(100% - 2 * #{$margin-small});
+      margin: $margin-small;
+      position: relative;
+
+      img{
+        -ms-object-fit: cover;
+        -moz-object-fit: cover;
+        -o-object-fit: cover;
+        -webkit-object-fit: cover;
+        object-fit: cover;
+        overflow: hidden;
+        width: 100%;
+        height: 10rem;
+        background-color: $color-secondary;
+        &.ready{
+          background-color: $color-white;
+        }
+      }
+
+      @media screen and (min-width: 500px) {
+        width: calc(50% - 2 * #{$margin-small});
+        @media screen and (min-width: 900px) {
+          width: calc(33.333% - 2 * #{$margin-small});
+        }
+      }
+    }
+
+    //box with image after searching
+    div.search-item{
+      height: 12rem;
+      &:hover > span, &:focus > span{
+          display: inline;
+          position: absolute;
+          left: $margin-small;
+          bottom: 2rem;
+      }
+      h3{
+        position: absolute;
+        top: $margin-tiny;
+        left: $margin-tiny;
+        font-size: $font-size-middle;
+        text-shadow: -1px 0 $color-white, 0 1px $color-white, 1px 0 $color-white, 0 -1px $color-white;
+      }
+      span{
+        display: none;
+        color: $color-black;
+        font-weight: bold;
+        text-shadow: -1px 0 $color-white, 0 1px $color-white, 1px 0 $color-white, 0 -1px $color-white;
+      }
+
+      div{
+        height: 2rem;
+        margin-top: $margin-tiny;
+        @include a-button('primary', 50%, 0, left);//height by default set to 2rem
+        button.link {
+          @include img-button("secondary", "../img/link.svg", "../img/link-hover.svg", calc(25% - #{$margin-tiny}), 2rem, 0 $margin-tiny 0 0, left);
+        }
+        button.mail {
+          @include img-button("secondary", "../img/mail.svg", "../img/mail-hover.svg", calc(25% - #{$margin-tiny}), 2rem, 0 $margin-tiny 0 0, left);
+        }
+      }
+    }
+
+    //box with image after upload
+    div.upload-item{
+      div{
+        margin-top: $margin-tiny;
+        border-bottom: 3px dotted $color-primary;
+        input{
+          width: 100%;
+          margin-bottom: $margin-small;
+          &:nth-of-type(2){
+            width: 75%;
+            margin-right: $margin-tiny;
+          }
+        }
+        button.ai {
+          @include img-button("secondary", "../img/ai.svg", "../img/ai-hover.svg", calc(25% - #{$margin-tiny}), 2rem, 0, right);
+        }
+        button.ai-loading{
+          @include img-button("secondary", "../img/loading.gif", "../img/loading.gif", calc(25% - #{$margin-tiny}), 2rem, 0, right);
+        }
+        @include button('primary', 100%, $margin-small);
+      }
+    }
+
+    @media screen and (min-width: 500px) {
+      justify-content: flex-start;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+// =====================================================================
+// Component with search console
+// =====================================================================
+
+div.search-console{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+
+  input{
+    width: 80vw;
+    height: 3rem;
+    float: left;
+    border: 1px solid $color-primary;
+    font-size: $font-size-middle;
+    &:focus{
+      border-color: $color-primary;
+      box-shadow: none;
+    }
+  }
+  button.find{
+    @include img-button("primary", "../img/find.svg", "../img/find-hover.svg", 20vw, 3rem, 0, left);
+  }
+  button.info{
+    @include img-button("secondary", "../img/info.svg", "../img/info-hover.svg", 20vw, 3rem, 0, left);
+    margin-left: $padding-small;
+    display: none;
+  }
+
+  @media screen and (min-width: 900px) {
+    position: inherit;
+    padding: $padding-medium;
+    height: calc(3rem + 2 * #{$padding-medium});
+    input{
+      width: 90%;
+    }
+    button.find{
+      width: 5%;
+    }
+    button.info{
+      width: calc(5% - #{$padding-small});
+      display: inline-block;
+    }
+  }
+}

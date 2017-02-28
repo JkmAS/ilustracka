@@ -1,0 +1,18 @@
+//basics
+@import "core/variables.scss";
+@import "core/mixins.scss";
+@import "core/reboot.scss";
+
+//base
+@import "base/base.scss";
+
+//components
+@import "components/header.scss";
+@import "components/login.scss";
+@import "components/footer.scss";
+@import "components/search-console.scss";
+@import "components/image-box.scss";
+@import "components/message-box.scss";
+@import "components/upload-console.scss";
+@import "components/administration-box.scss";
+@import "components/not-found.scss";

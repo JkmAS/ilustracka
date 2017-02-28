@@ -1,0 +1,67 @@
+// =====================================================================
+// Component for messages
+// =====================================================================
+
+div.alert, div.message{
+  margin: 0 $margin-medium;
+  color: $color-white;
+  &.small{
+    //same breakpoints like in the login box
+    @media screen and (min-width: 625px) {
+      width: 50%;
+      margin: 0 auto;
+      @media screen and (min-width: 1000px) {
+        width: 30%;
+      }
+    }
+  }
+  strong{
+    text-transform: uppercase;
+  }
+}
+
+div.alert{
+  padding: $padding-small;
+
+  &.info, &.loading{
+    background-color: $color-info;
+    border-left: 0.5rem solid $color-info-secondary;
+  }
+  &.error{
+    background-color: $color-error;
+    border-left: 0.5rem solid $color-error-secondary;
+  }
+  &.success{
+    background-color: $color-success;
+    border-left: 0.5rem solid $color-success-secondary;
+  }
+
+  span.loading{
+    display: inline-block;
+    overflow: hidden;
+    height: 1.3em;
+    margin-top: -0.3em;
+    line-height: 1.5em;
+    vertical-align: text-bottom;
+    font-weight: bold;
+    font-size: $font-size-middle;
+    &:after{
+      content: "\A.\A..\A...";
+      animation: load 2s steps(4) infinite;
+      display: inline-table;
+      white-space: pre;
+      text-align: left;
+    }
+    @keyframes load  {
+      to {
+        transform: translateY( -6.0em);
+      }
+    }
+  }
+}
+
+div.message{
+  background-color: $color-info;
+  border-left: 0.5rem solid $color-info-secondary;
+  padding: $padding-small;
+}

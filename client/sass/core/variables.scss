@@ -1,0 +1,77 @@
+// =====================================================================
+// Colors
+// =====================================================================
+
+//header, primary buttons, bold texts
+$color-primary: #e41a3e;
+//img placeholders, secondary buttons, texts
+$color-secondary: #75a9f9;
+//links
+$color-tertiary: #008cba;
+//background
+$color-background: #fff;
+//basic colors
+$color-black: #444;
+$color-white: #fff;
+
+$color-error: $color-primary;
+$color-error-secondary: lighten($color-error, 7%);
+$color-success: #009688;
+$color-success-secondary: lighten($color-success, 7%);
+$color-info: $color-tertiary;
+$color-info-secondary: lighten($color-tertiary, 7%);
+
+// =====================================================================
+// Font sizes
+// =====================================================================
+$font-size-big: 3rem;
+$font-size-middle: 1.5rem;
+$font-size-small: 1rem;
+$font-size-tiny: 0.7rem;
+
+// =====================================================================
+// Margins and paddings
+// =====================================================================
+$big: 3rem;
+$medium: 1rem;
+$small: 0.5rem;
+$tiny: 0.25rem;
+
+$margin-big: $big;
+$margin-medium: $medium;
+$margin-small: $small;
+$margin-tiny: $tiny;
+
+$padding-big: $big;
+$padding-medium: $medium;
+$padding-small: $small;
+$padding-tiny: $tiny;
+
+// =====================================================================
+// Basic vars for Reboot
+// =====================================================================
+
+//font sizes
+$font-size-root: $font-size-small;
+$font-size-base: $font-size-small;
+//font family
+$font-family-base: 'Roboto', sans-serif;
+//font weight
+$font-weight-base: inherit;
+//line height
+$line-height-base: 1.5;
+//body color and background
+$body-color: $color-secondary;
+$body-bg: $color-background;
+//link color, decoration and hover
+$link-color: $color-tertiary;
+$link-decoration: underline;
+$link-hover-color: lighten($color-tertiary, 7%);
+$link-hover-decoration: none;
+//table background, padding
+$table-bg: $color-primary;
+$table-cell-padding: $padding-medium;
+//other
+$text-muted: $color-primary;
+$cursor-disabled: not-allowed;
+$dt-font-weight: bold;

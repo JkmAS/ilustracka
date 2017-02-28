@@ -1,0 +1,705 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+@-ms-viewport {
+  width: device-width; }
+html {
+  font-size: 1rem;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: inherit;
+  line-height: 1.5;
+  color: #75a9f9;
+  background-color: #fff; }
+
+[tabindex="-1"]:focus {
+  outline: none !important; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: .5rem; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+abbr[title],
+abbr[data-original-title] {
+  cursor: help; }
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit; }
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin-bottom: .5rem;
+  margin-left: 0; }
+
+blockquote {
+  margin: 0 0 1rem; }
+
+a {
+  color: #008cba;
+  text-decoration: underline; }
+  a:hover {
+    color: #00a7de;
+    text-decoration: none; }
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none; }
+  a:not([href]):not([tabindex]):focus {
+    outline: none; }
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto; }
+
+figure {
+  margin: 0 0 1rem; }
+
+img {
+  vertical-align: middle; }
+
+[role="button"] {
+  cursor: pointer; }
+
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation; }
+
+table {
+  border-collapse: collapse;
+  background-color: #e41a3e; }
+
+caption {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #e41a3e;
+  text-align: left;
+  caption-side: bottom; }
+
+th {
+  text-align: left; }
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem; }
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color; }
+
+input,
+button,
+select,
+textarea {
+  line-height: inherit; }
+
+input[type="radio"]:disabled,
+input[type="checkbox"]:disabled {
+  cursor: not-allowed; }
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox; }
+
+textarea {
+  resize: vertical; }
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  line-height: inherit; }
+
+input[type="search"] {
+  -webkit-appearance: none; }
+
+output {
+  display: inline-block; }
+
+[hidden] {
+  display: none !important; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  min-width: 230px; }
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  margin-bottom: 0; }
+  @media screen and (min-width: 315px) {
+    h1 {
+      font-size: 3rem; } }
+
+h2 {
+  color: #e41a3e; }
+
+label {
+  width: 100%;
+  color: #444;
+  font-weight: bold;
+  margin-bottom: 0.25rem; }
+  label span {
+    color: #e41a3e;
+    padding-left: 0.25rem; }
+
+input {
+  height: 2rem;
+  border-radius: 0;
+  border: 1px solid #444; }
+  input:focus {
+    outline: none;
+    border-color: #75a9f9;
+    box-shadow: 0 0 10px #75a9f9; }
+
+a {
+  text-decoration: none;
+  transition: color 0.5s; }
+  a:hover {
+    text-decoration: underline;
+    color: #006687; }
+
+.content {
+  min-height: calc(100vh - 5vh);
+  overflow: auto; }
+
+header {
+  color: #e41a3e;
+  text-align: center;
+  margin: 0.5rem;
+  min-height: 3rem; }
+  header h1 {
+    line-height: 3rem;
+    font-size: 3rem; }
+    @media screen and (min-width: 750px) {
+      header h1.complex {
+        width: 50%;
+        float: left; } }
+    header h1 img {
+      height: 3rem;
+      vertical-align: top;
+      margin-right: 0.5rem; }
+    header h1 small {
+      font-size: 1.25rem;
+      display: none; }
+      @media screen and (min-width: 450px) {
+        header h1 small {
+          display: inline; } }
+    @media screen and (min-width: 315px) {
+      header h1 img {
+        margin-right: 1rem; } }
+  header div.button-group {
+    height: 3rem;
+    width: 100%; }
+    header div.button-group a {
+      background-color: #e41a3e;
+      color: #fff;
+      display: block;
+      line-height: 2rem;
+      font-weight: bold;
+      height: 2rem;
+      width: calc(50% - 2 * 0.5rem);
+      float: left;
+      margin: 0.5rem;
+      text-align: center;
+      transition: border 0.5s, background-color 0.5s, color 0.5s; }
+      header div.button-group a:hover, header div.button-group a:focus {
+        background-color: #fff;
+        border: 1px solid #e41a3e;
+        color: #e41a3e;
+        text-decoration: none; }
+    @media screen and (min-width: 750px) {
+      header div.button-group {
+        width: 50%;
+        float: right; } }
+  @media screen and (min-width: 750px) {
+    header {
+      margin-bottom: 3rem; } }
+
+div.login {
+  margin: 1rem; }
+  div.login button {
+    cursor: pointer;
+    background-color: #e41a3e;
+    color: #fff;
+    border: 0;
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    float: none;
+    transition: border 0.5s, background-color 0.5s, color 0.5s; }
+    div.login button:hover, div.login button:focus {
+      background-color: #fff;
+      border: 1px solid #e41a3e;
+      color: #e41a3e; }
+  div.login input {
+    width: 100%;
+    margin-bottom: 0.5rem; }
+  @media screen and (min-width: 625px) {
+    div.login {
+      width: 50%;
+      margin: 0 auto; } }
+  @media screen and (min-width: 625px) and (min-width: 1000px) {
+    div.login {
+      width: 30%; } }
+
+footer {
+  background-color: #e41a3e;
+  color: #fff;
+  text-align: center;
+  height: 3rem; }
+  footer p {
+    margin-bottom: 0;
+    line-height: 3rem;
+    font-size: 0.7rem;
+    font-weight: bold; }
+    @media screen and (min-width: 300px) {
+      footer p {
+        font-size: 1rem; } }
+  @media screen and (min-width: 300px) and (min-width: 625px) {
+    footer p {
+      padding-left: 1rem; } }
+
+  @media screen and (min-width: 300px) and (min-width: 625px) and (min-width: 900px) {
+    footer p {
+      line-height: 5vh; } }
+
+  @media screen and (min-width: 625px) {
+    footer {
+      text-align: left; } }
+  @media screen and (min-width: 625px) and (min-width: 900px) {
+    footer {
+      height: 5vh; } }
+
+div.search-console {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100; }
+  div.search-console input {
+    width: 80vw;
+    height: 3rem;
+    float: left;
+    border: 1px solid #e41a3e;
+    font-size: 1.5rem; }
+    div.search-console input:focus {
+      border-color: #e41a3e;
+      box-shadow: none; }
+  div.search-console button.find {
+    width: 20vw;
+    margin: 0;
+    float: left;
+    background: #e41a3e url("../img/find.svg") no-repeat center;
+    background-size: 2rem 2rem;
+    transition: background 0.5s;
+    border: 0;
+    height: 3rem;
+    cursor: pointer; }
+    div.search-console button.find:hover, div.search-console button.find:focus {
+      background: #fff url("../img/find-hover.svg") no-repeat center;
+      border: 1px solid #e41a3e;
+      background-size: 2rem 2rem; }
+  div.search-console button.info {
+    width: 20vw;
+    margin: 0;
+    float: left;
+    background: #75a9f9 url("../img/info.svg") no-repeat center;
+    background-size: 2rem 2rem;
+    transition: background 0.5s;
+    border: 0;
+    height: 3rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    display: none; }
+    div.search-console button.info:hover, div.search-console button.info:focus {
+      background: #fff url("../img/info-hover.svg") no-repeat center;
+      border: 1px solid #75a9f9;
+      background-size: 2rem 2rem; }
+  @media screen and (min-width: 900px) {
+    div.search-console {
+      position: inherit;
+      padding: 1rem;
+      height: calc(3rem + 2 * 1rem); }
+      div.search-console input {
+        width: 90%; }
+      div.search-console button.find {
+        width: 5%; }
+      div.search-console button.info {
+        width: calc(5% - 0.5rem);
+        display: inline-block; } }
+
+div.search, div.upload {
+  margin: 1rem; }
+  div.search div.search-box, div.search div.upload-box, div.upload div.search-box, div.upload div.upload-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center; }
+    div.search div.search-box p, div.search div.upload-box p, div.upload div.search-box p, div.upload div.upload-box p {
+      font-weight: bold; }
+    div.search div.search-box div.search-item, div.search div.search-box div.upload-item, div.search div.upload-box div.search-item, div.search div.upload-box div.upload-item, div.upload div.search-box div.search-item, div.upload div.search-box div.upload-item, div.upload div.upload-box div.search-item, div.upload div.upload-box div.upload-item {
+      width: calc(100% - 2 * 0.5rem);
+      margin: 0.5rem;
+      position: relative; }
+      div.search div.search-box div.search-item img, div.search div.search-box div.upload-item img, div.search div.upload-box div.search-item img, div.search div.upload-box div.upload-item img, div.upload div.search-box div.search-item img, div.upload div.search-box div.upload-item img, div.upload div.upload-box div.search-item img, div.upload div.upload-box div.upload-item img {
+        -ms-object-fit: cover;
+        -moz-object-fit: cover;
+        -o-object-fit: cover;
+        -webkit-object-fit: cover;
+        object-fit: cover;
+        overflow: hidden;
+        width: 100%;
+        height: 10rem;
+        background-color: #75a9f9; }
+        div.search div.search-box div.search-item img.ready, div.search div.search-box div.upload-item img.ready, div.search div.upload-box div.search-item img.ready, div.search div.upload-box div.upload-item img.ready, div.upload div.search-box div.search-item img.ready, div.upload div.search-box div.upload-item img.ready, div.upload div.upload-box div.search-item img.ready, div.upload div.upload-box div.upload-item img.ready {
+          background-color: #fff; }
+      @media screen and (min-width: 500px) {
+        div.search div.search-box div.search-item, div.search div.search-box div.upload-item, div.search div.upload-box div.search-item, div.search div.upload-box div.upload-item, div.upload div.search-box div.search-item, div.upload div.search-box div.upload-item, div.upload div.upload-box div.search-item, div.upload div.upload-box div.upload-item {
+          width: calc(50% - 2 * 0.5rem); } }
+  @media screen and (min-width: 500px) and (min-width: 900px) {
+    div.search div.search-box div.search-item, div.search div.search-box div.upload-item, div.search div.upload-box div.search-item, div.search div.upload-box div.upload-item, div.upload div.search-box div.search-item, div.upload div.search-box div.upload-item, div.upload div.upload-box div.search-item, div.upload div.upload-box div.upload-item {
+      width: calc(33.333% - 2 * 0.5rem); } }
+
+    div.search div.search-box div.search-item, div.search div.upload-box div.search-item, div.upload div.search-box div.search-item, div.upload div.upload-box div.search-item {
+      height: 12rem; }
+      div.search div.search-box div.search-item:hover > span, div.search div.search-box div.search-item:focus > span, div.search div.upload-box div.search-item:hover > span, div.search div.upload-box div.search-item:focus > span, div.upload div.search-box div.search-item:hover > span, div.upload div.search-box div.search-item:focus > span, div.upload div.upload-box div.search-item:hover > span, div.upload div.upload-box div.search-item:focus > span {
+        display: inline;
+        position: absolute;
+        left: 0.5rem;
+        bottom: 2rem; }
+      div.search div.search-box div.search-item h3, div.search div.upload-box div.search-item h3, div.upload div.search-box div.search-item h3, div.upload div.upload-box div.search-item h3 {
+        position: absolute;
+        top: 0.25rem;
+        left: 0.25rem;
+        font-size: 1.5rem;
+        text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff; }
+      div.search div.search-box div.search-item span, div.search div.upload-box div.search-item span, div.upload div.search-box div.search-item span, div.upload div.upload-box div.search-item span {
+        display: none;
+        color: #444;
+        font-weight: bold;
+        text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff; }
+      div.search div.search-box div.search-item div, div.search div.upload-box div.search-item div, div.upload div.search-box div.search-item div, div.upload div.upload-box div.search-item div {
+        height: 2rem;
+        margin-top: 0.25rem; }
+        div.search div.search-box div.search-item div a, div.search div.upload-box div.search-item div a, div.upload div.search-box div.search-item div a, div.upload div.upload-box div.search-item div a {
+          background-color: #e41a3e;
+          color: #fff;
+          display: block;
+          line-height: 2rem;
+          font-weight: bold;
+          height: 2rem;
+          width: 50%;
+          float: left;
+          margin: 0;
+          text-align: center;
+          transition: border 0.5s, background-color 0.5s, color 0.5s; }
+          div.search div.search-box div.search-item div a:hover, div.search div.search-box div.search-item div a:focus, div.search div.upload-box div.search-item div a:hover, div.search div.upload-box div.search-item div a:focus, div.upload div.search-box div.search-item div a:hover, div.upload div.search-box div.search-item div a:focus, div.upload div.upload-box div.search-item div a:hover, div.upload div.upload-box div.search-item div a:focus {
+            background-color: #fff;
+            border: 1px solid #e41a3e;
+            color: #e41a3e;
+            text-decoration: none; }
+        div.search div.search-box div.search-item div button.link, div.search div.upload-box div.search-item div button.link, div.upload div.search-box div.search-item div button.link, div.upload div.upload-box div.search-item div button.link {
+          width: calc(25% - 0.25rem);
+          margin: 0 0.25rem 0 0;
+          float: left;
+          background: #75a9f9 url("../img/link.svg") no-repeat center;
+          background-size: 2rem 2rem;
+          transition: background 0.5s;
+          border: 0;
+          height: 2rem;
+          cursor: pointer; }
+          div.search div.search-box div.search-item div button.link:hover, div.search div.search-box div.search-item div button.link:focus, div.search div.upload-box div.search-item div button.link:hover, div.search div.upload-box div.search-item div button.link:focus, div.upload div.search-box div.search-item div button.link:hover, div.upload div.search-box div.search-item div button.link:focus, div.upload div.upload-box div.search-item div button.link:hover, div.upload div.upload-box div.search-item div button.link:focus {
+            background: #fff url("../img/link-hover.svg") no-repeat center;
+            border: 1px solid #75a9f9;
+            background-size: 2rem 2rem; }
+        div.search div.search-box div.search-item div button.mail, div.search div.upload-box div.search-item div button.mail, div.upload div.search-box div.search-item div button.mail, div.upload div.upload-box div.search-item div button.mail {
+          width: calc(25% - 0.25rem);
+          margin: 0 0.25rem 0 0;
+          float: left;
+          background: #75a9f9 url("../img/mail.svg") no-repeat center;
+          background-size: 2rem 2rem;
+          transition: background 0.5s;
+          border: 0;
+          height: 2rem;
+          cursor: pointer; }
+          div.search div.search-box div.search-item div button.mail:hover, div.search div.search-box div.search-item div button.mail:focus, div.search div.upload-box div.search-item div button.mail:hover, div.search div.upload-box div.search-item div button.mail:focus, div.upload div.search-box div.search-item div button.mail:hover, div.upload div.search-box div.search-item div button.mail:focus, div.upload div.upload-box div.search-item div button.mail:hover, div.upload div.upload-box div.search-item div button.mail:focus {
+            background: #fff url("../img/mail-hover.svg") no-repeat center;
+            border: 1px solid #75a9f9;
+            background-size: 2rem 2rem; }
+    div.search div.search-box div.upload-item div, div.search div.upload-box div.upload-item div, div.upload div.search-box div.upload-item div, div.upload div.upload-box div.upload-item div {
+      margin-top: 0.25rem;
+      border-bottom: 3px dotted #e41a3e; }
+      div.search div.search-box div.upload-item div input, div.search div.upload-box div.upload-item div input, div.upload div.search-box div.upload-item div input, div.upload div.upload-box div.upload-item div input {
+        width: 100%;
+        margin-bottom: 0.5rem; }
+        div.search div.search-box div.upload-item div input:nth-of-type(2), div.search div.upload-box div.upload-item div input:nth-of-type(2), div.upload div.search-box div.upload-item div input:nth-of-type(2), div.upload div.upload-box div.upload-item div input:nth-of-type(2) {
+          width: 75%;
+          margin-right: 0.25rem; }
+      div.search div.search-box div.upload-item div button.ai, div.search div.upload-box div.upload-item div button.ai, div.upload div.search-box div.upload-item div button.ai, div.upload div.upload-box div.upload-item div button.ai {
+        width: calc(25% - 0.25rem);
+        margin: 0;
+        float: right;
+        background: #75a9f9 url("../img/ai.svg") no-repeat center;
+        background-size: 2rem 2rem;
+        transition: background 0.5s;
+        border: 0;
+        height: 2rem;
+        cursor: pointer; }
+        div.search div.search-box div.upload-item div button.ai:hover, div.search div.search-box div.upload-item div button.ai:focus, div.search div.upload-box div.upload-item div button.ai:hover, div.search div.upload-box div.upload-item div button.ai:focus, div.upload div.search-box div.upload-item div button.ai:hover, div.upload div.search-box div.upload-item div button.ai:focus, div.upload div.upload-box div.upload-item div button.ai:hover, div.upload div.upload-box div.upload-item div button.ai:focus {
+          background: #fff url("../img/ai-hover.svg") no-repeat center;
+          border: 1px solid #75a9f9;
+          background-size: 2rem 2rem; }
+      div.search div.search-box div.upload-item div button.ai-loading, div.search div.upload-box div.upload-item div button.ai-loading, div.upload div.search-box div.upload-item div button.ai-loading, div.upload div.upload-box div.upload-item div button.ai-loading {
+        width: calc(25% - 0.25rem);
+        margin: 0;
+        float: right;
+        background: #75a9f9 url("../img/loading.gif") no-repeat center;
+        background-size: 2rem 2rem;
+        transition: background 0.5s;
+        border: 0;
+        height: 2rem;
+        cursor: pointer; }
+        div.search div.search-box div.upload-item div button.ai-loading:hover, div.search div.search-box div.upload-item div button.ai-loading:focus, div.search div.upload-box div.upload-item div button.ai-loading:hover, div.search div.upload-box div.upload-item div button.ai-loading:focus, div.upload div.search-box div.upload-item div button.ai-loading:hover, div.upload div.search-box div.upload-item div button.ai-loading:focus, div.upload div.upload-box div.upload-item div button.ai-loading:hover, div.upload div.upload-box div.upload-item div button.ai-loading:focus {
+          background: #fff url("../img/loading.gif") no-repeat center;
+          border: 1px solid #75a9f9;
+          background-size: 2rem 2rem; }
+      div.search div.search-box div.upload-item div button, div.search div.upload-box div.upload-item div button, div.upload div.search-box div.upload-item div button, div.upload div.upload-box div.upload-item div button {
+        cursor: pointer;
+        background-color: #e41a3e;
+        color: #fff;
+        border: 0;
+        width: 100%;
+        height: 2rem;
+        line-height: 2rem;
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        float: none;
+        transition: border 0.5s, background-color 0.5s, color 0.5s; }
+        div.search div.search-box div.upload-item div button:hover, div.search div.search-box div.upload-item div button:focus, div.search div.upload-box div.upload-item div button:hover, div.search div.upload-box div.upload-item div button:focus, div.upload div.search-box div.upload-item div button:hover, div.upload div.search-box div.upload-item div button:focus, div.upload div.upload-box div.upload-item div button:hover, div.upload div.upload-box div.upload-item div button:focus {
+          background-color: #fff;
+          border: 1px solid #e41a3e;
+          color: #e41a3e; }
+    @media screen and (min-width: 500px) {
+      div.search div.search-box, div.search div.upload-box, div.upload div.search-box, div.upload div.upload-box {
+        justify-content: flex-start; } }
+
+div.alert, div.message {
+  margin: 0 1rem;
+  color: #fff; }
+  @media screen and (min-width: 625px) {
+    div.alert.small, div.message.small {
+      width: 50%;
+      margin: 0 auto; } }
+  @media screen and (min-width: 625px) and (min-width: 1000px) {
+    div.alert.small, div.message.small {
+      width: 30%; } }
+
+  div.alert strong, div.message strong {
+    text-transform: uppercase; }
+
+div.alert {
+  padding: 0.5rem; }
+  div.alert.info, div.alert.loading {
+    background-color: #008cba;
+    border-left: 0.5rem solid #00a7de; }
+  div.alert.error {
+    background-color: #e41a3e;
+    border-left: 0.5rem solid #e83958; }
+  div.alert.success {
+    background-color: #009688;
+    border-left: 0.5rem solid #00baa8; }
+  div.alert span.loading {
+    display: inline-block;
+    overflow: hidden;
+    height: 1.3em;
+    margin-top: -0.3em;
+    line-height: 1.5em;
+    vertical-align: text-bottom;
+    font-weight: bold;
+    font-size: 1.5rem; }
+    div.alert span.loading:after {
+      content: "\A.\A..\A...";
+      animation: load 2s steps(4) infinite;
+      display: inline-table;
+      white-space: pre;
+      text-align: left; }
+@keyframes load {
+  to {
+    transform: translateY(-6em); } }
+div.message {
+  background-color: #008cba;
+  border-left: 0.5rem solid #00a7de;
+  padding: 0.5rem; }
+
+form.upload-console {
+  padding: 1rem; }
+  form.upload-console input[type=file] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1; }
+  form.upload-console label.file {
+    margin-bottom: 0;
+    height: 2rem;
+    line-height: 2rem;
+    transition: background 0.5s;
+    text-align: center;
+    color: #fff;
+    background-color: #e41a3e;
+    display: inline-block;
+    cursor: pointer; }
+    form.upload-console label.file:focus, form.upload-console label.file:hover {
+      background-color: #fff;
+      color: #e41a3e;
+      border: 1px solid #e41a3e; }
+
+div.admin {
+  margin: 1rem; }
+  div.admin p {
+    font-weight: bold; }
+  div.admin table {
+    width: 100%;
+    min-width: 520px;
+    overflow-x: auto;
+    border: 1px solid #e41a3e; }
+    div.admin table tr th {
+      color: #fff;
+      text-align: center; }
+    div.admin table tr td {
+      background-color: #fff;
+      font-weight: bold; }
+      div.admin table tr td input {
+        width: 100%; }
+      div.admin table tr td button {
+        cursor: pointer;
+        background-color: #e41a3e;
+        color: #fff;
+        border: 0;
+        width: 100%;
+        height: 2rem;
+        line-height: 2rem;
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        float: none;
+        transition: border 0.5s, background-color 0.5s, color 0.5s; }
+        div.admin table tr td button:hover, div.admin table tr td button:focus {
+          background-color: #fff;
+          border: 0px solid #e41a3e;
+          color: #e41a3e; }
+      div.admin table tr td:last-child button {
+        cursor: pointer;
+        background-color: #75a9f9;
+        color: #fff;
+        border: 0;
+        width: 100%;
+        height: 2rem;
+        line-height: 2rem;
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        float: none;
+        transition: border 0.5s, background-color 0.5s, color 0.5s; }
+        div.admin table tr td:last-child button:hover, div.admin table tr td:last-child button:focus {
+          background-color: #fff;
+          border: 0px solid #75a9f9;
+          color: #75a9f9; }
+    div.admin table tr th, div.admin table tr td {
+      padding: 0.25rem; }
+  div.admin div {
+    width: 100%; }
+    div.admin div button {
+      cursor: pointer;
+      background-color: #e41a3e;
+      color: #fff;
+      border: 0;
+      width: 100%;
+      height: 2rem;
+      line-height: 2rem;
+      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+      float: none;
+      transition: border 0.5s, background-color 0.5s, color 0.5s; }
+      div.admin div button:hover, div.admin div button:focus {
+        background-color: #fff;
+        border: 1px solid #e41a3e;
+        color: #e41a3e; }
+    @media screen and (min-width: 750px) {
+      div.admin div {
+        width: 25%;
+        margin: 0 auto; } }
+
+div.not-found {
+  margin: 1rem; }
+  div.not-found p {
+    font-size: 1.5rem;
+    font-weight: bold; }
+  @media screen and (min-width: 625px) {
+    div.not-found {
+      width: 50%;
+      margin: 0 auto; } }
+  @media screen and (min-width: 625px) and (min-width: 1000px) {
+    div.not-found {
+      width: 30%; } }
+
+/*# sourceMappingURL=main.css.map */

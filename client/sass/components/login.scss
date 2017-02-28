@@ -1,0 +1,22 @@
+// =====================================================================
+// Login component
+// =====================================================================
+
+div.login{
+  @include button('primary', 100%, $margin-small);
+
+  margin: $margin-medium;
+
+  input{
+    width: 100%;
+    margin-bottom: $margin-small;
+  }
+
+  @media screen and (min-width: 625px) {
+    width: 50%;
+    margin: 0 auto;
+    @media screen and (min-width: 1000px) {
+      width: 30%;
+    }
+  }
+}

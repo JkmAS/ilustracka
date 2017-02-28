@@ -1,0 +1,58 @@
+// =====================================================================
+// Header component
+// =====================================================================
+
+$height: 3rem; // because of vertically align center of header
+
+header{
+  color: $color-primary;
+  text-align: center;
+  margin: $margin-small;
+  min-height: $height;
+
+  h1{
+    line-height: $height;
+    font-size: $font-size-big;
+
+    //if is h1 in complex header (with menu, etc.)
+    &.complex{
+      @media screen and (min-width: 750px) {
+        width: 50%;
+        float: left;
+      }
+    }
+
+    img{
+      height: $height;
+      vertical-align: top;
+      margin-right: $margin-small;
+    }
+    small {
+      font-size: 1.25rem;
+      display: none;
+      @media screen and (min-width: 450px) {
+        display: inline;
+      }
+    }
+    @media screen and (min-width: 315px) {
+      img{
+        margin-right: $margin-medium;
+      }
+    }
+  }
+
+  div.button-group {
+    //height of a-button is 2rem + 2*margin-small == 3rem height of header
+    @include a-button('primary', calc(50% - 2 * #{$margin-small}), $margin-small, left);
+    height: 3rem;
+    width: 100%;
+    @media screen and (min-width: 750px) {
+      width: 50%;
+      float: right;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    margin-bottom: $margin-big;
+  }
+}
