@@ -51,7 +51,10 @@ export class UploadImageItem extends Component {
         this.setState({loading: true});
 
         //analytics event use-ai
-        analytics.track("use-ai", {image: this.props.name});
+        analytics.track('use-ai', {
+            category: 'AI button',
+            label: this.props.name
+        });
 
         //call server method
         Meteor.call('ai.recognize', this.props._id, this.handleAIResponse);

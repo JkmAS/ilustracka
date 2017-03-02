@@ -78,7 +78,10 @@ export class UploadButton extends Component {
                         //if file is uploaded, show success message
                         if(progress == 100){
                             //analytics event upload-image
-                            analytics.track("upload-image", {files: files});
+                            analytics.track('upload-image', {
+                                category: 'Upload button',
+                                label: files[i].name
+                            });
                             this.props.showMessage("upload_success");
                         } else {
                             this.props.generateMessage("info", "Nahráno: " + files[i].name + " " + progress + "%");

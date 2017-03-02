@@ -69,7 +69,10 @@ export class AdminImageItem extends Component {
         this.props.removeImage(this.props._id, this.props.name);
 
         //analytics event delete-image
-        analytics.track("delete-image", {image: this.props.name});
+        analytics.track('delete-image', {
+            category: 'Delete button',
+            label: this.props.name
+        });
 
         this.props.showMessage("remove_success");
     }

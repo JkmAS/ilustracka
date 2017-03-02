@@ -32,7 +32,10 @@ export class SearchingConsole extends Component {
      */
     setQuery(event){
         //analytics event search-query
-        analytics.track("search-query", {query: event.target.value});
+        analytics.track('search-query', {
+            category: 'Search console',
+            label: event.target.value
+        });
 
         this.props.setFilter(event.target.value);
     }

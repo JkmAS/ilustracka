@@ -35,7 +35,7 @@ export class SearchingImageItem extends Component {
      */
     saveLink(){
         //analytics event save-link
-        analytics.track("save-link", {desc: "Copy the link to image"});
+        analytics.track('save-link');
 
         //check if the clipboard is supported by browser
         if(Clipboard.isSupported()){
@@ -57,7 +57,10 @@ export class SearchingImageItem extends Component {
             Meteor.call('email.send', address, this.props.src, this.props.name, this.handleMailResponse);
 
             //analytics event send-mail
-            analytics.track("send-mail", {address: address});
+            analytics.track('send-mail', {
+                category: 'Send mail button',
+                label: address
+            });
         } else {
             this.props.showMessage("mail_bad_format");
         }
