@@ -85,8 +85,10 @@ export class SearchingImageItem extends Component {
     render() {
         return (
             <div className="search-item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                     alt={this.props.name} data-src={this.props.src} className="b-lazy"/>
+                <a href={this.props.src} target="_blank">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                         alt={this.props.name} data-src={this.props.src} className="b-lazy"/>
+                </a>
                 <h3>{this.props.name}</h3>
                 <span>#{this.props.tags.join()}</span>
                 <div>

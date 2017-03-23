@@ -31,7 +31,7 @@ export class AdminImageItem extends Component {
 
         //make date user friendly
         let date = this.props.createdAt;
-        this.userFriendlyDate = date.getDate()+"."+date.getMonth()+"."+date.getFullYear();
+        this.userFriendlyDate = date.getDate()+"."+(date.getMonth()+1)+"."+date.getFullYear();
 
         //shorten the link name
         let link = this.props.name;

@@ -1,6 +1,6 @@
 Ilustracka
 =========================
-![stable](https://img.shields.io/badge/stable-1.0.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-brightgreen.svg) 
+![stable](https://img.shields.io/badge/stable-1.1.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-brightgreen.svg) 
 
 <p align="center">
   <img src="https://github.com/JkmAS/ilustracka/blob/master/docs/ilustracka-example.png" alt="Ilustracka"/>
@@ -9,7 +9,8 @@ Ilustracka
 About
 -----
 Ilustracka is the application for searching images in the student journalists association iList. 
-The app is based on Meteor JavaScript platform in the variant with React. 
+The app is based on Meteor JavaScript platform in the variant with React. The app supports only
+Czech language.
 
 Installation
 ------------
@@ -34,6 +35,27 @@ Features
   * Backup the images via ZIP files
   * Send email with the link to image
   
+Settings of app
+---------------
+The file with app´s settings `settings.json` has this structure:
+`
+  {
+    "public": {
+      "analyticsSettings": {
+        "Google Analytics": {
+          "trackingId": "<GA_ID>"
+        }
+      }
+    },
+    "AWSAccessKeyId": "<AWS_ID>",
+    "AWSSecretAccessKey": "<AWS_KEY>",
+    "S3Bucket": "<BUCKET_NAME>",
+    "S3BucketRegion": "<BUCKET_REGION>",
+    "SMTP": "smtp://USERNAME:PASSWORD@HOST:PORT",
+    "email": "USERNAME@HOST"  
+  }
+`
+  
 Google analytics events
 -----------------------
 
@@ -51,23 +73,23 @@ Requirements
 ------------
 
 NPM packages
-  * aws-sdk: ^2.12.0
-  * babel-runtime: ^6.22.0
-  * bcrypt: ^1.0.2
-  * blazy: ^1.8.2
-  * clipboard: ^1.6.0
-  * clipboard-js: ^0.3.3
-  * file-saver: ^1.3.3
-  * jszip: ^3.1.3
-  * jszip-utils: 0.0.2
-  * meteor-node-stubs: ^0.2.5
-  * react: ^15.4.2
-  * react-addons-pure-render-mixin: ^15.4.2
-  * react-dom: ^15.4.2
-  * react-redux: ^5.0.2
-  * react-router: ^3.0.2
-  * redux: ^3.6.0
-  * redux-thunk: ^2.2.0
+  * aws-sdk
+  * babel-runtime
+  * bcrypt
+  * blazy
+  * clipboard
+  * clipboard-js
+  * file-saver
+  * jszip
+  * jszip-utils
+  * meteor-node-stubs
+  * react
+  * react-addons-pure-render-mixin
+  * react-dom
+  * react-redux
+  * react-router
+  * redux
+  * redux-thunk
   
 Meteor packages 
   * meteor-base
@@ -115,6 +137,7 @@ Version
 ------
 
   * 1.0.0 - initial release
+  * 1.1.0 - bux fixed, change of readme, set limit to 12, add link to image tag, remove hotjar tracking code
 
 Author
 ------

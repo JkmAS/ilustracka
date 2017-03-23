@@ -5,7 +5,16 @@
 	Illustrator: Lenka Slukova
 	Contact: lenka.slukova [at] ilist.cz
 
+	Illustrator: Johana Amlerova
+    Contact: johana.amlerova [at] ilist.cz
+
+    Illustrator: Andrei Lopatin
+
+    Illustrator: Anna Habova
+
+    Illustrator: Jan Cerny
+
 /* SITE */
-	Last update:2017/03/01
+	Last update:2017/03/30
 	Language: Czech
 	Doctype: HTML5

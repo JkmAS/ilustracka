@@ -99,7 +99,7 @@ Searching.propTypes = {
  */
 const container =  createContainer(({filter}) => {
     //all images corresponding to query
-    Meteor.subscribe('images', 'SHOW_ALL_BY_QUERY', filter);
+    Meteor.subscribe('images', 'SHOW_ALL_BY_QUERY', filter,  12);
     return {
         images: Images.find({}, { sort: { createdAt: -1 } }).fetch(),
     };

@@ -34,7 +34,7 @@ if (Meteor.isServer) {
                  */
                 let escapedQuery = query.replace(/[\/\\^$*[\]{}]/g, "");
 
-                //search in name or in tags array, limit 9 results, case insensitive
+                //search in name or in tags array, limit 9 results, case insensitive, sorted by date
                 return Images.find(
                     {
                         $or :  [
@@ -52,7 +52,8 @@ if (Meteor.isServer) {
                                 ]
                     },
                     {
-                        limit: limit
+                        limit: limit,
+                        sort: { createdAt: -1 }
                     }
                 );
             case 'SHOW_UPLOAD_NOT_COMPLETED':

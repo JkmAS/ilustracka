@@ -153,8 +153,10 @@ export class UploadImageItem extends Component {
     render() {
         return (
             <div className="upload-item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                     alt={this.props.name} data-src={this.props.src} className="b-lazy"/>
+                <a href={this.props.src} target="_blank">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                         alt={this.props.name} data-src={this.props.src} className="b-lazy"/>
+                </a>
                 <div>
                     <form>
                         <label>Název<span>*</span></label>

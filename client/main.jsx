@@ -16,7 +16,7 @@ import Login from '../imports/ui/components/login/Login.jsx';
 import Searching from '../imports/ui/components/searching/Searching.jsx';
 import Uploading from '../imports/ui/components/uploading/Uploading.jsx';
 import Administration from '../imports/ui/components/administration/Administration.jsx';
-import NotFound from '../imports/ui/components/NotFound.js';
+import NotFound from '../imports/ui/components/NotFound.jsx';
 
 /**
  * Routes of application and setting of provider
