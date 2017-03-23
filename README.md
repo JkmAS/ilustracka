@@ -38,21 +38,23 @@ Features
 Settings of app
 ---------------
 The file with app´s settings `settings.json` has this structure:
+```
 {
-"public": {
-  "analyticsSettings": {
-    "Google Analytics": {
-      "trackingId": "<GA_ID>"
+  "public": {
+    "analyticsSettings": {
+      "Google Analytics": {
+        "trackingId": "<GA_ID>"
+      }
     }
-  }
-},
-"AWSAccessKeyId": "<AWS_ID>",
-"AWSSecretAccessKey": "<AWS_KEY>",
-"S3Bucket": "<BUCKET_NAME>",
-"S3BucketRegion": "<BUCKET_REGION>",
-"SMTP": "smtp://USERNAME:PASSWORD@HOST:PORT",
-"email": "USERNAME@HOST"  
+  },
+  "AWSAccessKeyId": "<AWS_ID>",
+  "AWSSecretAccessKey": "<AWS_KEY>",
+  "S3Bucket": "<BUCKET_NAME>",
+  "S3BucketRegion": "<BUCKET_REGION>",
+  "SMTP": "smtp://USERNAME:PASSWORD@HOST:PORT",
+  "email": "USERNAME@HOST"  
 }
+```
 
   
 Google analytics events
