@@ -20,6 +20,7 @@ App
   3. Set your Google Analytics, Amazon S3 Storage and email server via `settings.json`
   4. Run locally `npm start` at http://localhost:3000/ 
   5. Change user and admin default password in DB
+  
 Tests
   1. Run locally `npm test` at http://localhost:3000/
    
